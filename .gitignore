@@ -1,0 +1,71 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Poetry
+poetry.lock
+# Только если lock-файл не требуется фиксировать
+# иначе оставь, чтобы все окружения были идентичны
+
+# Virtual environment
+.venv/
+.env
+.env.*
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+*.mo
+*.db
+*.sqlite3
+media/
+staticfiles/
+local_settings.py
+db.sqlite3
+
+# PyCharm
+.idea/
+*.iml
+
+# VSCode
+.vscode/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# flake8
+.flake8
+
+# pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# Redis dumps
+dump.rdb
+
+# Docker
+*.pid
+*.tar
+*.gz
+*.tgz
+*.bak
+
+# MacOS
+.DS_Store
+
+# System
+Thumbs.db
+
+
