@@ -8,5 +8,3 @@ def build_habit_message(habit: Habit) -> str:
         f"Действие: <b>{habit.action}</b>\n"
         f"Время: <b>{habit.time.strftime('%H:%M')}</b>"
     )
-
-

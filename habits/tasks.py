@@ -14,7 +14,7 @@ def send_habit_reminder():
 
     for habit in habits:
         user = habit.user
-        tg_profile = getattr(user, 'telegram_profile', None)
+        tg_profile = getattr(user, "telegram_profile", None)
 
         if tg_profile and tg_profile.telegram_chat_id:
             message = f"⏰ Напоминание: {habit.action} в {habit.place}"
@@ -36,6 +36,3 @@ def send_telegram_message(chat_id: str, text: str):
         requests.post(url, data=data, timeout=10)
     except Exception as e:
         print(f"Ошибка при отправке сообщения в Telegram: {e}")
-
-
-

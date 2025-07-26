@@ -19,5 +19,3 @@ def send_telegram_message(chat_id: str, text: str) -> None:
         print(f"[DEBUG] Успешно отправлено! Статус: {response.status_code}")
     except requests.RequestException as e:
         print(f"[ERROR] Ошибка при отправке в Telegram: {e}")
-
-

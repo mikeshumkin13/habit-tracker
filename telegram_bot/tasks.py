@@ -33,7 +33,7 @@ def send_daily_habit_reminders():
 
     for habit in matching_habits:
         user = habit.user
-        tg_profile = getattr(user, 'telegram_profile', None)
+        tg_profile = getattr(user, "telegram_profile", None)
 
         if tg_profile and tg_profile.telegram_chat_id:
             message = build_habit_message(habit)
@@ -41,5 +41,3 @@ def send_daily_habit_reminders():
 
     print(f"[DEBUG] Всего привычек в базе: {Habit.objects.count()}")
     print(f"[DEBUG] Подходящие привычки: {matching_habits}")
-
-

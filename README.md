@@ -50,6 +50,115 @@ Swagger UI
 
 Redoc
 
+# Структура проекта
+
+.
+├── README.md
+├── config
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-312.pyc
+│   │   ├── celery.cpython-312.pyc
+│   │   ├── settings.cpython-312.pyc
+│   │   ├── urls.cpython-312.pyc
+│   │   └── wsgi.cpython-312.pyc
+│   ├── asgi.py
+│   ├── celery.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── db.sqlite3
+├── habits
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-312.pyc
+│   │   ├── admin.cpython-312.pyc
+│   │   ├── apps.cpython-312.pyc
+│   │   ├── models.cpython-312.pyc
+│   │   ├── serializers.cpython-312.pyc
+│   │   ├── tasks.cpython-312.pyc
+│   │   ├── urls.cpython-312.pyc
+│   │   └── views.cpython-312.pyc
+│   ├── admin.py
+│   ├── apps.py
+│   ├── migrations
+│   │   ├── 0001_initial.py
+│   │   ├── __init__.py
+│   │   └── __pycache__
+│   │       ├── 0001_initial.cpython-312.pyc
+│   │       └── __init__.cpython-312.pyc
+│   ├── models.py
+│   ├── serializers.py
+│   ├── tasks.py
+│   ├── tests
+│   │   ├── __init__.py
+│   │   ├── __pycache__
+│   │   │   ├── __init__.cpython-312.pyc
+│   │   │   └── test_models.cpython-312-pytest-8.4.1.pyc
+│   │   └── test_models.py
+│   ├── urls.py
+│   └── views.py
+├── manage.py
+├── poetry.lock
+├── pyproject.toml
+├── pytest.ini
+├── telegram_bot
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-312.pyc
+│   │   ├── admin.cpython-312.pyc
+│   │   ├── apps.cpython-312.pyc
+│   │   ├── bot.cpython-312.pyc
+│   │   ├── models.cpython-312.pyc
+│   │   ├── services.cpython-312.pyc
+│   │   ├── tasks.cpython-312.pyc
+│   │   └── tests.cpython-312-pytest-8.4.1.pyc
+│   ├── admin.py
+│   ├── apps.py
+│   ├── bot.py
+│   ├── migrations
+│   │   ├── __init__.py
+│   │   └── __pycache__
+│   │       └── __init__.cpython-312.pyc
+│   ├── models.py
+│   ├── services.py
+│   ├── tasks.py
+│   ├── tests
+│   │   ├── __init__.py
+│   │   ├── __pycache__
+│   │   │   ├── __init__.cpython-312.pyc
+│   │   │   └── test_tasks.cpython-312-pytest-8.4.1.pyc
+│   │   └── test_tasks.py
+│   └── views.py
+└── users
+    ├── __init__.py
+    ├── __pycache__
+    │   ├── __init__.cpython-312.pyc
+    │   ├── admin.cpython-312.pyc
+    │   ├── apps.cpython-312.pyc
+    │   ├── models.cpython-312.pyc
+    │   ├── serializers.cpython-312.pyc
+    │   ├── tests.cpython-312-pytest-8.4.1.pyc
+    │   ├── urls.cpython-312.pyc
+    │   └── views.cpython-312.pyc
+    ├── admin.py
+    ├── apps.py
+    ├── migrations
+    │   ├── 0001_initial.py
+    │   ├── __init__.py
+    │   └── __pycache__
+    │       ├── 0001_initial.cpython-312.pyc
+    │       └── __init__.cpython-312.pyc
+    ├── models.py
+    ├── tests
+    │   ├── __init__.py
+    │   ├── __pycache__
+    │   │   ├── __init__.cpython-312.pyc
+    │   │   └── test_models.cpython-312-pytest-8.4.1.pyc
+    │   └── test_models.py
+    └── views.py
+
+
 # Тесты
 
 Запуск тестов:

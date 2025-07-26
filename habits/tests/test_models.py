@@ -92,5 +92,3 @@ def test_periodicity_must_be_between_1_and_7():
         habit.clean()
 
     assert "Периодичность должна быть от 1 до 7 дней." in str(excinfo.value)
-
-

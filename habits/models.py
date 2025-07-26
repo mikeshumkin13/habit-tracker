@@ -5,10 +5,7 @@ from django.db import models
 
 class Habit(models.Model):
     user = models.ForeignKey(
-        settings.AUTH_USER_MODEL,
-        on_delete=models.CASCADE,
-        related_name="habits",
-        verbose_name="Пользователь"
+        settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="habits", verbose_name="Пользователь"
     )
     place = models.CharField(max_length=255, verbose_name="Место")
     time = models.TimeField(verbose_name="Время")
@@ -21,15 +18,10 @@ class Habit(models.Model):
         blank=True,
         verbose_name="Связанная привычка",
         limit_choices_to={"is_pleasant": True},
-        related_name="related_to"
+        related_name="related_to",
     )
     periodicity = models.PositiveSmallIntegerField(default=1, verbose_name="Периодичность (в днях)")
-    reward = models.CharField(
-        max_length=255,
-        null=True,
-        blank=True,
-        verbose_name="Вознаграждение"
-    )
+    reward = models.CharField(max_length=255, null=True, blank=True, verbose_name="Вознаграждение")
     execution_time = models.PositiveSmallIntegerField(verbose_name="Время на выполнение (в секундах)")
     is_public = models.BooleanField(default=False, verbose_name="Публичная привычка")
 
@@ -52,5 +44,3 @@ class Habit(models.Model):
     class Meta:
         verbose_name = "Привычка"
         verbose_name_plural = "Привычки"
-
-

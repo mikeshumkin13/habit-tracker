@@ -9,5 +9,3 @@ class TelegramProfile(models.Model):
 
     def __str__(self):
         return f"Telegram профиль пользователя {self.user.email}"
-
-
