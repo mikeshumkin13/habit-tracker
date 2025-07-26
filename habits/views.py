@@ -26,6 +26,3 @@ class PublicHabitListView(generics.ListAPIView):
     queryset = Habit.objects.filter(is_public=True)
     serializer_class = HabitSerializer
     permission_classes = [permissions.AllowAny]
-
-
-
