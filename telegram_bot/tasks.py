@@ -1,5 +1,5 @@
 from celery import shared_task
-from django.utils import timezone
+from django.utils.timezone import localtime, now
 from datetime import timedelta
 from habits.models import Habit
 from telegram_bot.bot import send_telegram_message
@@ -8,13 +8,13 @@ from telegram_bot.services import build_habit_message
 
 @shared_task
 def send_daily_habit_reminders():
-    now = timezone.now()
-    weekday = now.weekday()
-    current_time = now.time().replace(second=0, microsecond=0)
+    current_dt = localtime(now())
+    weekday = current_dt.weekday()
+    current_time = current_dt.time().replace(second=0, microsecond=0)
 
     # Устанавливаем окно ±1 минута
-    time_window_start = (now - timedelta(minutes=1)).time()
-    time_window_end = (now + timedelta(minutes=1)).time()
+    time_window_start = (current_dt - timedelta(minutes=1)).time()
+    time_window_end = (current_dt + timedelta(minutes=1)).time()
 
     print(f"[DEBUG] Проверка времени: {current_time}, день недели: {weekday}")
     print(f"[DEBUG] Окно времени: {time_window_start} — {time_window_end}")
@@ -38,5 +38,8 @@ def send_daily_habit_reminders():
         if tg_profile and tg_profile.telegram_chat_id:
             message = build_habit_message(habit)
             send_telegram_message(tg_profile.telegram_chat_id, message)
+
+    print(f"[DEBUG] Всего привычек в базе: {Habit.objects.count()}")
+    print(f"[DEBUG] Подходящие привычки: {matching_habits}")
 
 
